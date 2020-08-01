@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Add post new!{% endblock %}
+
+{% block body %}
+
+    <div class="container" style="text-align: center;">
+        {{ form_start(form) }}
+
+        <div class="form-group">
+            {{ form_errors(form) }}
+
+            {{ form_row(form.title) }}
+            {{ form_row(form.post) }}
+
+            {{ form_row(form.save) }}
+
+        </div>
+        {{ form_end(form) }}
+    </div>
+
+{% endblock %}

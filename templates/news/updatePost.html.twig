@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Update post news!{% endblock %}
+
+{% block body %}
+
+    <div class="container" style="text-align: center;">
+        {{ form_start(form) }}
+            <div class="form-group">
+
+                {{ form_errors(form) }}
+
+                {{ form_row(form.title) }}
+                {{ form_row(form.post) }}
+
+                {{ form_row(form.save) }}
+            </div>
+
+        {{ form_end(form) }}
+
+
+    </div>
+    <div class="container" >
+        <div class="row">
+            <a href="{{ path('show') }}" class="btn btn-light">  <b> Back to all news </b> </a>
+        </div>
+    </div>
+
+{% endblock %}
